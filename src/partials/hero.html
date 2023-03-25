@@ -1,0 +1,100 @@
+<!-- hero-section -->
+<section class="hero-section" id="anemone">
+  <div class="hero-section__container container">
+    <h1  class="hero-section__title" style="--shift-to-y: -355px">
+      ANEMONE
+    </h1>
+    <h2
+      class="hero-section__subtitle"
+      style="--shift-from-x: 0; --shift-to-x: -90px; --shift-to-y: 177px"
+    >
+      flower studio
+    </h2>
+    <button
+      class="hero-section__btn"
+      type="button"
+      style="--shift-from-x: 0; --shift-to-x: 25px; --shift-to-y: 177px"
+      data-contact-us-open
+    >
+      <svg class="hero-section__svg" width="" height="">
+        <use
+          class="hero-section__icon-txt-mobile"
+          href="./img/hero-btn.svg#icon-hero-txt-mobile"
+        ></use>
+        <use
+          class="hero-section__icon-txt-tablet"
+          href="./img/hero-btn.svg#icon-hero-txt-tablet"
+        ></use>
+        <use
+          class="hero-section__icon-txt-desktop"
+          href="./img/hero-btn.svg#icon-hero-txt-desktop"
+        ></use>
+        <use
+          class="hero-section__icon-arrow"
+          href="./img/hero-btn.svg#icon-hero-arrow"
+        ></use>
+      </svg>
+    </button>
+  </div>
+  <div class="hero-section__thumb">
+    <picture>
+      <source
+        srcset="
+          ./img/hero-images/hero-image-desktop.webp    1x,
+          ./img/hero-images/hero-image-desktop@2x.webp 2x
+        "
+        media="(min-width: 1280px)"
+        type="image/webp"
+      />
+
+      <source
+        srcset="
+          ./img/hero-images/hero-image-desktop.jpg    1x,
+          ./img/hero-images/hero-image-desktop@2x.jpg 2x
+        "
+        media="(min-width: 1280px)"
+        type="image/jpeg"
+      />
+
+      <source
+        srcset="
+          ./img/hero-images/hero-image-tablet.webp    1x,
+          ./img/hero-images/hero-image-tablet@2x.webp 2x
+        "
+        media="(min-width: 768px)"
+        type="image/webp"
+      />
+
+      <source
+        srcset="
+          ./img/hero-images/hero-image-tablet.jpg    1x,
+          ./img/hero-images/hero-image-tablet@2x.jpg 2x
+        "
+        media="(min-width: 768px)"
+        type="image/jpg"
+      />
+
+      <source
+        srcset="
+          ./img/hero-images/hero-image-mobile.webp    1x,
+          ./img/hero-images/hero-image-mobile@2x.webp 2x
+        "
+        type="image/webp"
+      />
+
+      <source
+        srcset="
+          ./img/hero-images/hero-image-mobile.jpg    1x,
+          ./img/hero-images/hero-image-mobile@2x.jpg 2x
+        "
+        type="image/jpg"
+      />
+
+      <img
+        class="hero-section__img  animate__animated animate__fadeIn"
+        src="./img/hero-image-desktop.jpg"
+        alt="Flower studio preview"
+      />
+    </picture>
+  </div>
+</section>

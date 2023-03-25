@@ -1,0 +1,32 @@
+.container {
+  min-width: 320px;
+  max-width: 480px;
+
+  padding: 0 16px;
+  margin: 0 auto;
+}
+.section-padding {
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: none;
+    width: 480px;
+  }
+}
+/* tablet */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 24px;
+  }
+  .section-padding {
+    padding-bottom: 100px;
+  }
+}
+/* desktop */
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+}

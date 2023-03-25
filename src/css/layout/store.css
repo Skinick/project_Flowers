@@ -1,0 +1,120 @@
+.store-title {
+    margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px){
+.store-title {
+    margin-bottom: 60px;
+    }}
+
+@media screen and (min-width: 1280px){
+.store-title {
+    margin-bottom: 80px;
+    }}
+
+.store-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px; 
+    margin: 0;
+    padding: 0;
+    margin-bottom: 32px;
+    width: 100%;
+   }
+
+@media screen and (min-width: 768px) {
+    .store-list {
+    gap: 40px 32px;
+    margin-bottom: 60px;
+    }}
+
+@media screen and (max-width: 767px) {
+    .store-item {
+        width: 47.22%;
+    }}
+    
+.store-img {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+@media screen and (min-width: 768px) {
+    .store-img {
+        width: 344px;
+        height: 399px;
+        margin-bottom: 16px;
+    }}
+
+@media screen and (min-width: 1280px) {
+    .store-img {
+        width: 600px;
+        height: 542px;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+       }}
+
+@media screen and (min-width: 1280px){
+.store-img:hover, .store-img:focus {        
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+        }}
+
+.store-subtitel {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(20/16);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+.store-subtitel {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: calc(39/32);
+    margin-bottom: 8px;
+    }}
+
+@media screen and (min-width: 1280px) {
+.store-subtitel {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: calc(44/36);
+    margin-bottom: 4px;
+    }}
+
+@media screen and (min-width: 768px) {
+.store-subtitel::after{
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 1px solid #000000;
+    border: 1px solid var(--main-black-color);
+    margin-left: 14px;
+    }}
+
+.store-text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(15/12);
+    opacity: 0.6;
+}
+
+@media screen and (min-width: 768px){
+.store-text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: calc(29/24);
+    }}
+
+@media screen and (min-width: 1280px) {
+    .store-text {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: calc(34/28);
+    }}
+

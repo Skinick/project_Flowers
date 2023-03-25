@@ -1,0 +1,156 @@
+<!-- Modal "Contact us"  -->
+
+<div class="backdrop is-hidden" data-contact-us>
+  <div class="modal-contact-wrap">
+    <button class="close-btn-icon" data-contact-us-close>
+      <svg class="close-icon" width="12" height="12">
+        <use href="./img/modal.svg#icon-close-button"></use>
+      </svg>
+    </button>
+    <strong class="modal-contact-title">Contact us</strong>
+    <h2 class="modal-contact-text">
+      If you have any additional questions or you want to clarify something
+      before you make an order please fill in your contact details. We will call
+      you back.
+    </h2>
+    <form class="modal-form" name="modal-form">
+      <label for="user_name_id" class="user-name">
+        <span class="user-name">Name</span>
+        <input
+          type="text"
+          class="input-name input"
+          id="user_name_id"
+          name="user-name"
+          placeholder="Kristin Watson"
+          maxlength="36"
+          pattern="(?=.*[a-z])(?=.*[A-Z]).{4,}"
+          title="Username must be two words separated by space"
+          required
+        />
+      </label>
+      <label for="user_email_id" class="user-mail">
+        <span class="user-name">Email</span>
+        <input
+          type="email"
+          class="input-mail input"
+          name="user-mail"
+          id="user_email_id"
+          placeholder="tanya.hill@example.com"
+          minlength="5"
+          required
+        />
+      </label>
+      <button
+        class="modal-form-btn button"
+        type="submit"
+        data-contact-us-close
+        data-result-contact-open
+        onclick="return false"
+        role="button"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Thank you -->
+
+<div class="modal-result is-hidden" data-result-contact>
+  <div class="modal-result-wrap">
+    <button class="close-btn-icon" data-result-contact-close>
+      <svg class="close-icon" width="12" height="12">
+        <use href="./img/modal.svg#icon-close-button"></use>
+      </svg>
+    </button>
+    <picture>
+      <source
+        srcset="./img/modal/img@1x.png 1x, ./img/modal/img@2x.png 2x"
+        type="image/png"
+        media="(min-width:768px)"
+      />
+      <source
+        srcset="
+          ./img/modal/flowers-thanks-tab@1x.png 1x,
+          ./img/modal/flowers-thanks-tab@1x.png 2x
+        "
+        type="image/png"
+        media="(max-width:767px)"
+      />
+      <img
+        class="result-img"
+        src="./img/modal/thank-you-photo.png"
+        alt="Grateful flowers"
+        width="188"
+      />
+    </picture>
+    <strong class="title-result">Thank you!</strong>
+    <p class="answer-result">
+      We have received your contact details and will reach you soon.
+    </p>
+    <button class="modal-form-btn" type="submit" data-result-contact-close>
+      Continue
+    </button>
+  </div>
+</div>
+
+<!-- Modal Follow -->
+
+<div class="modal-follow is-hidden" data-follow>
+  <div class="modal-follow-wrap">
+    <div class="modal-follow-img-wrap">
+      <picture>
+        <source
+          srcset="
+            ./img/modal/img-desk428d.jpg 1x,
+            ./img/modal/img-desk856d.jpg 2x
+          "
+          type="image/jpg"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="./img/modal/img-tab588.jpg 1x, ./img/modal/img-tab1176.jpg 2x"
+          type="image/jpg"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./img/modal/img-mob272.jpg 1x, ./img/modal/img-mob544.jpg 2x"
+          type="image/jpg"
+          media="(max-width: 767px)"
+        />
+        <img
+          class="modal-follow-img"
+          src="./img/modal/img-flow.jpg"
+          alt="Flowers"
+          width="272"
+          loading="lazy"
+        />
+      </picture>
+      <button class="close-btn-icon" type="button" data-follow-close>
+        <svg class="result-btn-icon" width="12" height="12">
+          <use href="./img/modal.svg#icon-close-button"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="content-modal-follow">
+      <strong class="modal-follow-title">Follow to our newsletter</strong>
+      <p class="follow-answer">
+        Be the first to get exclusive offers and the latest news on our product
+        directly in your box.
+      </p>
+      <form class="modal-email" name="modal-form">
+        <label for="user_email_follow" class="user-mail-follow">Email</label>
+        <input
+          type="email"
+          class="input-mail input"
+          name="user-mail-follow"
+          id="user_email_follow"
+          placeholder="Your email"
+          required
+        />
+        <button class="modal-form-btn button" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</div>

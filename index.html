@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/flow-1/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Flower studio</title>
+    <!----------------------- slick-slider css ---------------------->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <!----------------------- /slick-slider css ---------------------->
+
+    <!-- =======base styles======= -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    
+    <!-- анімація anchor-scroll.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script type="module" crossorigin src="/flow-1/assets/index-bdd28793.js"></script>
+    <link rel="stylesheet" href="/flow-1/assets/index-9012835d.css">
+  </head>
+  <body>
+    <!-- =======modal======= -->
+    <!-- Modal "Contact us"  -->
+
+<div class="backdrop is-hidden" data-contact-us>
+  <div class="modal-contact-wrap">
+    <button class="close-btn-icon" data-contact-us-close>
+      <svg class="close-icon" width="12" height="12">
+        <use href="/flow-1/assets/modal-66f47ec6.svg#icon-close-button"></use>
+      </svg>
+    </button>
+    <strong class="modal-contact-title">Contact us</strong>
+    <h2 class="modal-contact-text">
+      If you have any additional questions or you want to clarify something
+      before you make an order please fill in your contact details. We will call
+      you back.
+    </h2>
+    <form class="modal-form" name="modal-form">
+      <label for="user_name_id" class="user-name">
+        <span class="user-name">Name</span>
+        <input
+          type="text"
+          class="input-name input"
+          id="user_name_id"
+          name="user-name"
+          placeholder="Kristin Watson"
+          maxlength="36"
+          pattern="(?=.*[a-z])(?=.*[A-Z]).{4,}"
+          title="Username must be two words separated by space"
+          required
+        />
+      </label>
+      <label for="user_email_id" class="user-mail">
+        <span class="user-name">Email</span>
+        <input
+          type="email"
+          class="input-mail input"
+          name="user-mail"
+          id="user_email_id"
+          placeholder="tanya.hill@example.com"
+          minlength="5"
+          required
+        />
+      </label>
+      <button
+        class="modal-form-btn button"
+        type="submit"
+        data-contact-us-close
+        data-result-contact-open
+        onclick="return false"
+        role="button"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Thank you -->
+
+<div class="modal-result is-hidden" data-result-contact>
+  <div class="modal-result-wrap">
+    <button class="close-btn-icon" data-result-contact-close>
+      <svg class="close-icon" width="12" height="12">
+        <use href="/flow-1/assets/modal-66f47ec6.svg#icon-close-button"></use>
+      </svg>
+    </button>
+    <picture>
+      <source
+        srcset="/flow-1/assets/img@1x-b8111875.png 1x, /flow-1/assets/img@2x-eb91baee.png 2x"
+        type="image/png"
+        media="(min-width:768px)"
+      />
+      <source
+        srcset="/flow-1/assets/flowers-thanks-tab@1x-c6d85726.png 1x, /flow-1/assets/flowers-thanks-tab@1x-c6d85726.png 2x"
+        type="image/png"
+        media="(max-width:767px)"
+      />
+      <img
+        class="result-img"
+        src="/flow-1/assets/img@1x-b8111875.png"
+        alt="Grateful flowers"
+        width="188"
+      />
+    </picture>
+    <strong class="title-result">Thank you!</strong>
+    <p class="answer-result">
+      We have received your contact details and will reach you soon.
+    </p>
+    <button class="modal-form-btn" type="submit" data-result-contact-close>
+      Continue
+    </button>
+  </div>
+</div>
+
+<!-- Modal Follow -->
+
+<div class="modal-follow is-hidden" data-follow>
+  <div class="modal-follow-wrap">
+    <div class="modal-follow-img-wrap">
+      <picture>
+        <source
+          srcset="/flow-1/assets/img-desk428d-17c59d65.jpg 1x, /flow-1/assets/img-desk856d-25e34b90.jpg 2x"
+          type="image/jpg"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="/flow-1/assets/img-tab588-496bc293.jpg 1x, /flow-1/assets/img-tab1176-2f649c34.jpg 2x"
+          type="image/jpg"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="/flow-1/assets/img-mob272-b0d50f4a.jpg 1x, /flow-1/assets/img-mob544-806f3770.jpg 2x"
+          type="image/jpg"
+          media="(max-width: 767px)"
+        />
+        <img
+          class="modal-follow-img"
+          src="/flow-1/assets/img-mob272-b0d50f4a.jpg"
+          alt="Flowers"
+          width="272"
+          loading="lazy"
+        />
+      </picture>
+      <button class="close-btn-icon" type="button" data-follow-close>
+        <svg class="result-btn-icon" width="12" height="12">
+          <use href="/flow-1/assets/modal-66f47ec6.svg#icon-close-button"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="content-modal-follow">
+      <strong class="modal-follow-title">Follow to our newsletter</strong>
+      <p class="follow-answer">
+        Be the first to get exclusive offers and the latest news on our product
+        directly in your box.
+      </p>
+      <form class="modal-email" name="modal-form">
+        <label for="user_email_follow" class="user-mail-follow">Email</label>
+        <input
+          type="email"
+          class="input-mail input"
+          name="user-mail-follow"
+          id="user_email_follow"
+          placeholder="Your email"
+          required
+        />
+        <button class="modal-form-btn button" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <!-- =======header======= -->
+    <!-- 
+Anchor link
+ id="anemone"
+ id="about"
+ id="store"
+ id="delivery"
+ id="blog"
+--->
+
+<!-- HEADER--->
+<header class="header сontainer header-js">
+  <div class="header-box ">
+    <a class="header-link" href="./index.html">
+      <svg class="logo-icon">
+        <use href="/flow-1/assets/header-footer-96c0c1fd.svg#icon-logo"></use>
+      </svg>
+    </a>
+    <div class="header-nav">
+      <ul class="header-nav-list list">
+        <li class="header-nav-item">
+          <a href="#anemone" class="header-nav-link link">Anemone</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#about" class="header-nav-link link">About us</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#store" class="header-nav-link link">Store</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#delivery" class="header-nav-link link">Delivery</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#blog" class="header-nav-link link">Blog</a>
+        </li>
+      </ul>
+    </div>
+    <div class="header-link-box">
+      <a class="header-tel-link link" href="tel:+380631234567"
+        ><svg class="logo-tel">
+          <use href="/flow-1/assets/header-footer-96c0c1fd.svg#icon-tel"></use>
+        </svg>
+      </a>
+      <!-- burger btn for mobile menu-->
+      <button
+        class="burger-menu-btn js-open-menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu">
+        <svg class="burger-menu-icon">
+          <use href="/flow-1/assets/header-footer-96c0c1fd.svg#icon-burger"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+<!--MOBILE MENU ------------------------------------------------------------------------------------>
+<div class="menu-container js-menu-container" id="mobile-menu">
+  <button class="modal-btn menu-toggle js-close-menu">
+    <svg class="x-icon">
+      <use href="/flow-1/assets/header-footer-96c0c1fd.svg#icon-cross"></use>
+    </svg>
+  </button>
+  <!-- mob-menu list --->
+  <ul class="mobile-menu-list list">
+    <li class="mobile-menu-item">
+      <a href="#anemone" class="mobile-menu-link link js-close-menu">Anemone</a>
+    </li>
+    <li class="mobile-menu-item">
+      <a href="#about" class="mobile-menu-link link js-close-menu">About us</a>
+    </li>
+    <li class="mobile-menu-item">
+      <a href="#store" class="mobile-menu-link link js-close-menu">Store</a>
+    </li>
+    <li class="mobile-menu-item">
+      <a href="#delivery" class="mobile-menu-link link js-close-menu">Delivery</a>
+    </li>
+    <li class="mobile-menu-item">
+      <a href="#blog" class="mobile-menu-link link js-close-menu">Blog</a>
+    </li>
+  </ul>
+</div>
+
+
+    <!-- =======main======= -->
+    <main>
+      <!-- hero-section -->
+<section class="hero-section" id="anemone">
+  <div class="hero-section__container container">
+    <h1  class="hero-section__title" style="--shift-to-y: -355px">
+      ANEMONE
+    </h1>
+    <h2
+      class="hero-section__subtitle"
+      style="--shift-from-x: 0; --shift-to-x: -90px; --shift-to-y: 177px"
+    >
+      flower studio
+    </h2>
+    <button
+      class="hero-section__btn"
+      type="button"
+      style="--shift-from-x: 0; --shift-to-x: 25px; --shift-to-y: 177px"
+      data-contact-us-open
+    >
+      <svg class="hero-section__svg" width="" height="">
+        <use
+          class="hero-section__icon-txt-mobile"
+          href="/flow-1/assets/hero-btn-835d7981.svg#icon-hero-txt-mobile"
+        ></use>
+        <use
+          class="hero-section__icon-txt-tablet"
+          href="/flow-1/assets/hero-btn-835d7981.svg#icon-hero-txt-tablet"
+        ></use>
+        <use
+          class="hero-section__icon-txt-desktop"
+          href="/flow-1/assets/hero-btn-835d7981.svg#icon-hero-txt-desktop"
+        ></use>
+        <use
+          class="hero-section__icon-arrow"
+          href="/flow-1/assets/hero-btn-835d7981.svg#icon-hero-arrow"
+        ></use>
+      </svg>
+    </button>
+  </div>
+  <div class="hero-section__thumb">
+    <picture>
+      <source
+        srcset="/flow-1/assets/hero-image-desktop-de3dd4cb.webp 1x, /flow-1/assets/hero-image-desktop@2x-2e7d506b.webp 2x"
+        media="(min-width: 1280px)"
+        type="image/webp"
+      />
+
+      <source
+        srcset="/flow-1/assets/hero-image-desktop-0da10e06.jpg 1x, /flow-1/assets/hero-image-desktop@2x-a75f237b.jpg 2x"
+        media="(min-width: 1280px)"
+        type="image/jpeg"
+      />
+
+      <source
+        srcset="/flow-1/assets/hero-image-tablet-9c25c938.webp 1x, /flow-1/assets/hero-image-tablet@2x-8b350988.webp 2x"
+        media="(min-width: 768px)"
+        type="image/webp"
+      />
+
+      <source
+        srcset="/flow-1/assets/hero-image-tablet-95e3868c.jpg 1x, /flow-1/assets/hero-image-tablet@2x-b90de0d5.jpg 2x"
+        media="(min-width: 768px)"
+        type="image/jpg"
+      />
+
+      <source
+        srcset="/flow-1/assets/hero-image-mobile-0d5da7ae.webp 1x, /flow-1/assets/hero-image-mobile@2x-d16216b8.webp 2x"
+        type="image/webp"
+      />
+
+      <source
+        srcset="/flow-1/assets/hero-image-mobile-936efcdd.jpg 1x, /flow-1/assets/hero-image-mobile@2x-13ad4fb0.jpg 2x"
+        type="image/jpg"
+      />
+
+      <img
+        class="hero-section__img  animate__animated animate__fadeIn"
+        src="./img/hero-image-desktop.jpg"
+        alt="Flower studio preview"
+      />
+    </picture>
+  </div>
+</section>
+
+      <section class="section-about section-padding" id="about">
+  <div class="container">
+    <h2 class="titles about-title">ABOUT</h2>
+    <div class="about-wrapper">
+      <p class="about-desc">
+        We are a minimalistic flower studio. We love people and flowers.
+        Therefore, every day we give people the beauty and joy creating stylish
+        and modern masterpieces. Every bouquet we create is unique as you are.
+      </p>
+      <img
+        class="about-img"
+        srcset="/flow-1/assets/img_288-b67002fe.png 288w, /flow-1/assets/img_344-34f9455b.png 344w, /flow-1/assets/img_632-117dfa23.png 632w, /flow-1/assets/img_576-5af4fc4f.png 576w, /flow-1/assets/img_688-02f1f4cf.png 688w, /flow-1/assets/img_1264-398c8975.png 1264w"
+        sizes="(min-width: 1280px) 632px, (min-width: 768px) 344px, (max-width: 768px) 288px, 100vw"
+        src="/flow-1/assets/img_632-117dfa23.png"
+        alt="The flowers are light orange"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
+
+      <section id="store" class="container section-padding">
+  <h2 class="store-title titles">STORE</h2>
+  <ul class="store-list list">
+    <li class="store-item item">
+      <picture>
+        <source
+          media="(min-width: 1280px)"
+          srcset="/flow-1/assets/bouquet-img-3-desk@1x-aa2e7a27.jpg 1x, /flow-1/assets/bouquet-img-3-desk@2x-a542c306.jpg 2x"
+          type="image/jpg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="/flow-1/assets/bouquet-img-3-tabl@1x-fb2fc676.jpg 1x, /flow-1/assets/bouquet-img-3-tabl@2x-855f3fe2.jpg 2x"
+          type="image/jpg"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="/flow-1/assets/bouquet-img-3-mobi@1x-fe2fd8ab.jpg 1x, /flow-1/assets/bouquet-img-3-mobi@2x-6b71f918.jpg 2x"
+          type="image/jpg"
+        />
+        <img
+          src="/flow-1/assets/bouquet-img-3-mobi@1x-fe2fd8ab.jpg"
+          class="store-img"
+          alt="compliments"
+          width="136"
+          loading="lazy"
+        />
+      </picture>
+      <div>
+        <h3 class="store-subtitel">compliments</h3>
+        <p class="store-text">from $15</p>
+      </div>
+    </li>
+    <li class="store-item item">
+      <picture>
+        <source
+          media="(min-width: 1280px)"
+          srcset="/flow-1/assets/bouquet-img-1-desk@1x-c7abf59f.jpg 1x, /flow-1/assets/bouquet-img-1-desk@2x-f15c418b.jpg 2x"
+          type="image/jpg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="/flow-1/assets/bouquet-img-1-tabl@1x-1022614b.jpg 1x, /flow-1/assets/bouquet-img-1-tabl@2x-6595bfc0.jpg 2x"
+          type="image/jpg"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="/flow-1/assets/bouquet-img-1-mobi@1x-d2346162.jpg 1x, /flow-1/assets/bouquet-img-1-mobi@2x-a6e9465f.jpg 2x"
+          type="image/jpg"
+        />
+        <img
+          src="/flow-1/assets/bouquet-img-1-mobi@1x-d2346162.jpg"
+          class="store-img"
+          alt="bouquets size S"
+          width="136"
+          loading="lazy"
+        />
+      </picture>
+      <div>
+        <h3 class="store-subtitel">bouquets size S</h3>
+        <p class="store-text">from $25</p>
+      </div>
+    </li>
+    <li class="store-item item">
+      <picture>
+        <source
+          media="(min-width: 1280px)"
+          srcset="/flow-1/assets/bouquet-img-2-desk@1x-a95d1d8f.jpg 1x, /flow-1/assets/bouquet-img-2-desk@2x-c1de8c06.jpg 2x"
+          type="image/jpg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="/flow-1/assets/bouquet-img-2-tabl@1x-3bf6bc3e.jpg 1x, /flow-1/assets/bouquet-img-2-tabl@2x-535afe6c.jpg 2x"
+          type="image/jpg"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="/flow-1/assets/bouquet-img-2-mobi@1x-573fdd44.jpg 1x, /flow-1/assets/bouquet-img-2-mobi@2x-803e09fe.jpg 2x"
+          type="image/jpg"
+        />
+        <img
+          src="/flow-1/assets/bouquet-img-2-mobi@1x-573fdd44.jpg"
+          class="store-img"
+          alt="bouquets size M"
+          width="136"
+          loading="lazy"
+        />
+      </picture>
+      <div>
+        <h3 class="store-subtitel">bouquets size M</h3>
+        <p class="store-text">from $45</p>
+      </div>
+    </li>
+    <li class="store-item item">
+      <picture>
+        <source
+          media="(min-width: 1280px)"
+          srcset="/flow-1/assets/bouquet-img-4-desk@1x-ae61968f.jpg 1x, /flow-1/assets/bouquet-img-4-desk@2x-f814f318.jpg 2x"
+          type="image/jpg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="/flow-1/assets/bouquet-img-4-tabl@1x-796c0d57.jpg 1x, /flow-1/assets/bouquet-img-4-tabl@2x-d1a5610e.jpg 2x"
+          type="image/jpg"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="/flow-1/assets/bouquet-img-4-mobi@1x-a9afafab.jpg 1x, /flow-1/assets/bouquet-img-4-mobi@2x-2a960374.jpg 2x"
+          type="image/jpg"
+        />
+        <img
+          src="/flow-1/assets/bouquet-img-4-mobi@1x-a9afafab.jpg"
+          class="store-img"
+          alt="bouquets size L"
+          width="136"
+          loading="lazy"
+        />
+      </picture>
+      <div>
+        <h3 class="store-subtitel">bouquets size L</h3>
+        <p class="store-text">from $60</p>
+      </div>
+    </li>
+  </ul>
+  <button class="store-button buttons" data-contact-us-open>
+    Order flowers
+  </button>
+</section>
+
+      <section id="delivery" class="section-delivery">
+  <div class="container">
+    <h2 class="titles">DELIVERY</h2>
+    <ul class="delivery-list">
+      <li class="delivery-item">
+        <p class="number">1</p>
+        <p class="delivery-text">
+          Choose your bouquet and make an order on website
+        </p>
+      </li>
+      <li class="delivery-item">
+        <p class="number">2</p>
+        <p class="delivery-text">
+          Wait for the call to clarify the details of the order. You can pay
+          online or to the courier
+        </p>
+      </li>
+      <li class="delivery-item">
+        <p class="number">3</p>
+        <p class="delivery-text">
+          Wait for the delivery at the selected time or pick up the order from
+          the store
+        </p>
+      </li>
+      <li class="delivery-item">
+        <p class="number">4</p>
+        <p class="delivery-text">Make someone happy or enjoy yourself</p>
+      </li>
+    </ul>
+  </div>
+  <picture class="delivery-picture">
+    <source
+      srcset="/flow-1/assets/delivery-desktop-14db2813.jpg 1x, /flow-1/assets/delivery-desktop@2x-c56b12d8.jpg 2x"
+      media="(min-width: 1280px)"
+    />
+    <source
+      srcset="/flow-1/assets/delivery-tablet-005ba676.jpg 1x, /flow-1/assets/delivery-tablet@2x-fbd77779.jpg 2x"
+      media="(min-width: 768px)"
+    />
+    <source
+      srcset="/flow-1/assets/delivery-mobile-2cea252f.jpg 1x, /flow-1/assets/delivery-mobile@2x-aa237b23.jpg 2x"
+      media="(min-width: 480px)"
+    />
+    <img src="/flow-1/assets/delivery-mobile-2cea252f.jpg" alt="" />
+  </picture>
+</section>
+
+      <section class="container section-padding" id="blog">
+  <h2 class="titles blog-titles">BLOG</h2>
+  <div class="responsive-slider">
+    <div class="slide">
+      <picture>
+        <source
+          srcset="/flow-1/assets/flowers-image1-desck-f31b5666.jpg 1x, /flow-1/assets/flowers-image1-desck@2x-ad513963.jpg 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="/flow-1/assets/flowers-image1-tablet-99704a74.jpg 1x, /flow-1/assets/flowers-image1-tablet@2x-bce91d4f.jpg 2x"
+          media="(min-width: 768px)"
+        />
+
+        <img
+          width="390"
+          src="/flow-1/assets/flowers-image1-582d9d9a.jpg"
+          srcset="/flow-1/assets/flowers-image1@2x-51918665.jpg 2x"
+          alt="img"
+        />
+      </picture>
+    </div>
+    <div class="slide">
+      <picture>
+        <source
+          srcset="/flow-1/assets/flowers-image2-desck-8ad9b19d.jpg 1x, /flow-1/assets/flowers-image2-desck@2x-b3ab7418.jpg 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="/flow-1/assets/flowers-image2-tablet-4a85a212.jpg 1x, /flow-1/assets/flowers-image2-tablet@2x-4e29c2bd.jpg 2x"
+          media="(min-width: 768px)"
+        />
+
+        <img
+          width="390"
+          src="/flow-1/assets/flowers-image2-cf6bdf4b.jpg"
+          srcset="/flow-1/assets/flowers-image2@2x-f262e221.jpg 2x"
+          alt="img"
+        />
+      </picture>
+    </div>
+    <div class="slide">
+      <picture>
+        <source
+          srcset="/flow-1/assets/flowers-image3-desck-2ec87237.jpg 1x, /flow-1/assets/flowers-image3-desck@2x-5fb00073.jpg 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="/flow-1/assets/flowers-image3-tablet-babd8d86.jpg 1x, /flow-1/assets/flowers-image3-tablet@2x-2c2e7e3e.jpg 2x"
+          media="(min-width: 768px)"
+        />
+
+        <img
+          width="390"
+          src="/flow-1/assets/flowers-image3-cafa01c0.jpg"
+          srcset="/flow-1/assets/flowers-image3@2x-41b0bf6d.jpg 2x"
+          alt="img"
+        />
+      </picture>
+    </div>
+    <div class="slide">
+      <picture>
+        <source
+          srcset="/flow-1/assets/flowers-image4-desck-effbb61a.jpg 1x, /flow-1/assets/flowers-image4-desck@2x-df328170.jpg 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="/flow-1/assets/flowers-image4-tablet-53c66ed0.jpg 1x, /flow-1/assets/flowers-image4-tablet@2x-98be3e4f.jpg 2x"
+          media="(min-width: 768px)"
+        />
+
+        <img
+          width="390"
+          src="/flow-1/assets/flowers-image4-4fa449fa.jpg"
+          srcset="/flow-1/assets/flowers-image1@2x-51918665.jpg 2x"
+          alt="img"
+        />
+      </picture>
+    </div>
+    <div class="slide">
+      <picture>
+        <source
+          srcset="/flow-1/assets/flowers-image5-desck-f1d9d7b4.jpg 1x, /flow-1/assets/flowers-image5-desck@2x-aa860401.jpg 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="/flow-1/assets/flowers-image5-tablet-7eb56867.jpg 1x, /flow-1/assets/flowers-image5-tablet@2x-d84f4377.jpg 2x"
+          media="(min-width: 768px)"
+        />
+
+        <img
+          width="390"
+          src="/flow-1/assets/flowers-image5-28b16039.jpg"
+          srcset="/flow-1/assets/flowers-image2@2x-f262e221.jpg 2x"
+          alt="img"
+        />
+      </picture>
+    </div>
+    <div class="slide">
+      <picture>
+        <source
+          srcset="/flow-1/assets/flowers-image6-desck-03dcba34.jpg 1x, /flow-1/assets/flowers-image6-desck@2x-2cbb3e99.jpg 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="/flow-1/assets/flowers-image6-tablet-d637deeb.jpg 1x, /flow-1/assets/flowers-image6-tablet@2x-005ef756.jpg 2x"
+          media="(min-width: 768px)"
+        />
+
+        <img
+          width="390"
+          src="/flow-1/assets/flowers-image6-c3c89e93.jpg"
+          srcset="/flow-1/assets/flowers-image3@2x-41b0bf6d.jpg 2x"
+          alt="img"
+        />
+      </picture>
+    </div>
+  </div>
+  <div class="btn-wrap">
+    <button class="prev-btn blog-slider-btn">
+      <svg class="svg-arrow" width="60px" height="60px">
+        <use href="/flow-1/assets/blog-7ab5ec7c.svg#arrow-left"></use>
+      </svg>
+    </button>
+    <button class="next-btn blog-slider-btn">
+      <svg class="svg-arrow" width="60px" height="60px">
+        <use href="/flow-1/assets/blog-7ab5ec7c.svg#arrow-right"></use>
+      </svg>
+    </button>
+  </div>
+  <p class="blog-text">Follow to our newsletter</p>
+  <button class="buttons" data-follow-open>Subscribe</button>
+</section>
+
+    </main>
+    <!-- =======footer======= -->
+    <!-- FOOTER BLOCK ----->
+
+<footer class="footer-section">
+  <div class="footer container">
+    <a class="footer-logo-link" href="./index.html">
+      <svg class="logo-footer-icon">
+        <use href="/flow-1/assets/header-footer-96c0c1fd.svg#icon-logo"></use></svg
+    ></a>
+    <div class="footer-nav-box footer-box">
+      <h3 class="footer-title">Navigation</h3>
+      <ul class="footer-list list">
+        <li class="footer-item">
+          <a class="footer-nav-link link" href="#anemone">Anemone</a>
+        </li>
+        <li class="footer-item">
+          <a class="footer-nav-link link" href="#about">About us</a>
+        </li>
+        <li class="footer-item">
+          <a class="footer-nav-link link" href="#store">Store</a>
+        </li>
+        <li class="footer-item">
+          <a class="footer-nav-link link" href="#delivery">Delivery</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-time-box footer-box">
+      <h3 class="footer-title">Opening times</h3>
+      <ul class="footer-list list">
+        <li class="footer-work-time ">Every day 9:00-22:00</li>
+      </ul>
+    </div>
+    <div class="footer-contact-box footer-box">
+      <h3 class="footer-title">Contacts</h3>
+      <ul class="footer-list list">
+        <li class="footer-item">
+          <a class="footer-contact-link link" href="tel:+380631234567"
+            >+38 063 123 45 67</a
+          >
+        </li>
+        <li class="footer-item">
+          <a
+            class="footer-contact-link link"
+            href="mailto:anemonestudio@example.com"
+            >anemonestudio @example.com</a
+          >
+        </li>
+        <li class="footer-item">
+          <a href="https://goo.gl/maps/gK2a956GizcYafyN6"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          class="link footer-item">Reitarska Street, 11 Kyiv, Ukraine</a></li>       
+      </ul>
+    </div>
+    <div class="footer-sm-box footer-box">
+      <ul class="footer-list sm-icon-list list">
+        <li>
+          <a href="https://uk-ua.facebook.com/" target="_blank"
+            ><svg class="logo-social">
+              <use href="/flow-1/assets/header-footer-96c0c1fd.svg#icon-facebook"></use></svg
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><svg class="logo-social">
+              <use href="/flow-1/assets/header-footer-96c0c1fd.svg#icon-instagram"></use></svg
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Підключаємо JavaScript mobile-menu.js -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous">
+    </script>
+    <!-- Підключаємо JavaScript Slick Slider -->
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- =======base js======= -->
+    
+  </body>
+</html>
